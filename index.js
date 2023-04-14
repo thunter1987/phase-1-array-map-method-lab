@@ -12,9 +12,9 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return [...tutorials].map((tutorial) => {
+  return tutorials.map((tutorial) => {
     const words = tutorial.split(' ').map((word) => {
-      return word.replace(word.at(0), word.charAt(0).toUpperCase());
+      return word.replace(word.charAt(0), word.charAt(0).toUpperCase());
     });
     return words.toString().replaceAll(',', ' ');
   });
